@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<title>CTR:NF records</title>
+</head>
+<body>
+<h1 style="text-align:center;" >Welcome!</h1>
+<h1 style="text-align:center;" >Here is displayed my records for CTR:NF</h1>
+<ul>
+  <li>1.</li>
+  <li>2.</li>
+  <li>3.</li>
+</ul>
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+<p>Please input a number between 1 and 10:</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+
+function myFunction() {
+  var x, text;
+
+  // Get the value of the input field with id="numb"
+  x = document.getElementById("numb").value;
+
+  // If x is Not a Number or less than one or greater than 10
+  if (isNaN(x) || x < 1 || x > 10) {
+    text = "Input not valid";
+  } else {
+    text = "Input OK";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+<div>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+<p>Drag the CTR-logo into the rectangle:</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="http://www.numskull.com/wp-content/uploads/CTR-Logo-Numskull-600x150.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+<table style="table-align:center">
+<tbody>
+ <tr>
+    <th>Track</th>
+    <th>Course Time</th>
+    <th>Best Lap</th>
+	<th>Character</th>
+	<th>Video Link</th>
+  </tr>
+  <tr>
+    <td>Crash Cove</td>
+    <td>1:18:57</td>
+    <td>0:25:29</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=dCmCgkQuF_o" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Roo's Tubes</td>
+    <td>1:15:80</td>
+    <td>0:24:55</td>
+	<td>Baby T</td>
+	<td><a href="https://www.youtube.com/watch?v=uUdCHQtSd3M" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Mystery Caves</td>
+    <td>1:56:75</td>
+    <td>0:38:47</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=L6t2GWNrm8E" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Sewer Speedway</td>
+    <td>1:43:57</td>
+    <td>0:33:79</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=518dLGW6Jk4" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Tiger Temple</td>
+    <td>-:--:--</td>
+    <td>-:--:--</td>
+	<td>???</td>
+	<td><a href="" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Coco Park</td>
+    <td>1:16:04</td>
+    <td>0:24:19</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=hKosx_Yxr8o" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Papu's Pyramid</td>
+    <td>1:26:58</td>
+    <td>0:28:22</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=WrXYFaWmtz4" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Dingo Canyon</td>
+    <td>1:30:29</td>
+    <td>0:29:19</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=MoqQ-IlTgAY" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Blizzard Bluff</td>
+    <td>-:--:--</td>
+    <td>-:--:--</td>
+	<td>???</td>
+	<td><a href="" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Dragon Mines</td>
+    <td>1:16:30</td>
+    <td>0:24:55</td>
+	<td>Spyro</td>
+	<td><a href="https://www.youtube.com/watch?v=D3JhKHsvDfE" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Polar Pass</td>
+    <td>2:01:42</td>
+    <td>0:37:06</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=hU50zWBg40M" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Tiny Arena</td>
+    <td>2:55:50</td>
+    <td>0:57:72</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=4T7AAkpG2uU" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Cortex Castle</td>
+    <td>1:53:64</td>
+    <td>0:34:53</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=s5zHtHlIwug" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>N. Gin Labs</td>
+    <td>2:11:09</td>
+    <td>0:42:80</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=zLesDCM5hOw" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Hot Air Skyway</td>
+    <td>2:09:22</td>
+    <td>0:41:54</td>
+	<td>Spyro</td>
+	<td><a href="https://www.youtube.com/watch?v=WUhqMnHKk44" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Oxide Station</td>
+    <td>2:40:52</td>
+    <td>0:50:91</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=WLO0NJUM_tE" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Slide Coliseum</td>
+    <td>1:37:79</td>
+    <td>0:32:19</td>
+	<td>Baby T</td>
+	<td><a href="https://www.youtube.com/watch?v=kifKF2kc60k" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Turbo Track</td>
+    <td>-:--:--</td>
+    <td>-:--:--</td>
+	<td>???</td>
+	<td><a href="" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Inferno Island</td>
+    <td>1:32:92</td>
+    <td>0:30:26</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=DrlzZ3mN7io" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Jungle Boogie</td>
+    <td>-:--:--</td>
+    <td>-:--:--</td>
+	<td>???</td>
+	<td><a href="" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Clockwork Wumpa</td>
+    <td>1:53:71</td>
+    <td>0:35:66</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=LqqLLizHsgc" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Android Alley</td>
+    <td>2:28:81</td>
+    <td>0:48:84</td>
+	<td>Zem</td>
+	<td><a href="https://www.youtube.com/watch?v=LXq35daEo6A" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Electron Avenue</td>
+    <td>-:--:--</td>
+    <td>-:--:--</td>
+	<td>???</td>
+	<td><a href="" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Deep Sea Driving</td>
+    <td>1:35:86</td>
+    <td>0:30:56</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=YKFhBZh7SSg" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Thunder Struck</td>
+    <td>-:--:--</td>
+    <td>-:--:--</td>
+	<td>???</td>
+	<td><a href="" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Tiny Temple</td>
+    <td>1:38:46</td>
+    <td>0:27:76</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=6Xfby9f1EjM" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Meteor Gorge</td>
+    <td>1:22:48</td>
+    <td>0:27:06</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=tJ64Ed4OXjw" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Out of Time</td>
+    <td>1:51:84</td>
+    <td>0:34:83</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=aVEM3WvBtZg" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Barin Ruins</td>
+    <td>1:41:36</td>
+    <td>0:33:09</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=diWgHIh4fnQ" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Assembly Lane</td>
+    <td>-:--:--</td>
+    <td>-:--:--</td>
+	<td>???</td>
+	<td><a href="" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Hyper Spaceway</td>
+    <td>1:46:50</td>
+    <td>0:33:13</td>
+	<td>Spyro</td>
+	<td><a href="https://www.youtube.com/watch?v=id99W9huw8s" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Twilight Tour</td>
+    <td>2:11:29</td>
+    <td>0:40:94</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=9HFYoc68FO8" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Prehistoric Playground</td>
+    <td>2:20:07</td>
+    <td>0:45:84</td>
+	<td>Spyro</td>
+	<td><a href="https://www.youtube.com/watch?v=Qc-Xq_mzgTs" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Spyro Circuit</td>
+    <td>2:09:72</td>
+    <td>0:42:60</td>
+	<td>Spyro</td>
+	<td><a href="https://www.youtube.com/watch?v=nS3yM6UmQM8" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Nina's Nightmare</td>
+    <td>-:--:--</td>
+    <td>-:--:--</td>
+	<td>???</td>
+	<td><a href="" target="_blank">Youtube</a> </td>
+  </tr>
+  <tr>
+    <td>Koala Carnival</td>
+    <td>1:38:26</td>
+    <td>0:31:86</td>
+	<td>Ami</td>
+	<td><a href="https://www.youtube.com/watch?v=kwF0wIxJhx4" target="_blank">Youtube</a> </td>
+  </tr>
+  </tbody>
+</table>
+<iframe width="420" height="315" src="https://www.youtube.com/embed/cNWRZ3DgNzU" frameborder="0" allowfullscreen></iframe>
+</iframe>
+<img src="https://assets1.ignimgs.com/2018/12/07/ctrnf-reveal-2-1544151492692.jpg">
+</div>
+</body>
+</html> 

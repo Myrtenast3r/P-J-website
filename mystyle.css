@@ -1,0 +1,49 @@
+
+body {
+  background-color: white;
+}
+
+h1 {
+  color: Black;
+  margin-left: 20px;
+}
+
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+
+ul {
+	list-style-type; circle;
+	}
+
+table {
+	margin-left:auto;
+	margin-right:auto;
+	border: 2px solid Black;
+	width: 800px;
+}
+th {
+		height: 50px;
+		width: 200px;
+		text-align: left;
+		// border-bottom: 1px solid #000;
+		// background-color: #F00;
+		
+	}
+
+td {
+	border: 1px solid #000;
+}
+	
+/*i-frame {
+	margin-left:auto;
+	margin-right:auto;
+}*/
+
+img {
+	width: 200px;
+	heigth: 200px;
